@@ -29,3 +29,10 @@ Inoltre ogni singola funzione è spiegata nel codice, se quindi aprite il file p
 
 ## define.h
 L'ultimo file della catena "define.h" contiene le costanti per la semplificazione del passaggio di parametri alle funzioni della libreria, inoltre include alcune delle librerie base; ciò rende quindi futile includerle anche nei vostri sorgenti ma non sarà fonte di errore.
+Le librerie gia include sono:
+     - stdio.h
+     - stdlib.
+     - windows.h
+     - time.h
+     - unistd.h
+     - conio.h
