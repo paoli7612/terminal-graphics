@@ -28,11 +28,11 @@ void sposta_vai_a(int x,int y){
 	_y_spostamento = y;
 }
 
-void stampa_carattere(int carattere){ 
+void stampa_carattere(char carattere){ 
 	printf("%c",carattere);
 } 
 
-void stampa_a_posizione(int c, int x, int y){
+void stampa_a_posizione(char c, int x, int y){
 	vai_a(x,y);
 	stampa_carattere(c);
 }

@@ -7,20 +7,20 @@
 
 //_______________BASE_________________________
 //cambia il colore di cio che verra stampato da quel punto in poi
-void cambia_colore(int);
+void cambia_colore(int colore);
 
 //sposta il cursore di scrittura alle coordinate date
-void vai_a(int,int);
+void vai_a(int x, int y);
 
 //modifica in maniera permanente i valori che riceve il "vai_a"
 //...(transla cio che verra stampato a monitor da quel momento in poi)
-void sposta_vai_a(int,int);
+void sposta_vai_a(int x_offset, int y_offset);
 
 //stampa il carattere dato / il valore ASCII del numero dato
-void stampa_carattere(int);
+void stampa_carattere(char carattere);
 
 //sposta il cursore di scrittura e stampa il carattere
-void stampa_a_posizione(int,int,int);
+void stampa_a_posizione(char carattere, int x, int y);
 
 //blocca il programma finche non viene premuto un tasto
 //...il tasto premuto viene salvato in "tasto_premuto"
@@ -30,7 +30,7 @@ char attendi_tasto();
 void attendi_invio();
 
 //blocca il programma per TOT secondi
-void attendi_secondi(int);
+void attendi_secondi(int secondi);
 
 //inizializza la casualita impostando il seme di casualita
 //... utilizzando l'ora di sistema
@@ -74,51 +74,51 @@ void terminale_massimizza_fullscreen();
 // la differenza tra singolo e doppio e' dovuta al tipo
 //...di caratteri del codice ASCII utilizzati
 
-void disegna_linea_verticale_doppia(int,int,int);		
-void disegna_linea_orizzontale_doppia(int,int,int);		
-void disegna_linea_verticale_singola(int,int,int);		
-void disegna_linea_orizzontale_singola(int,int,int);	
-void disegna_linea(int,int,int,int,int);						
-void disegna_rettangolo_doppio(int,int,int,int);			
-void disegna_rettangolo_singolo(int,int,int,int);			
-void disegna_rettangolo(int,int,int,int,int);				
+void disegna_linea_verticale_doppia(int y1, int y2, int x);		
+void disegna_linea_orizzontale_doppia(int x1, int x2, int y);		
+void disegna_linea_verticale_singola(int y1, int y2, int x);		
+void disegna_linea_orizzontale_singola(int x1, int x2, int y);	
+void disegna_linea(int p1, int p2, int c, int vert_oriz, int sing_dopp);						
+void disegna_rettangolo_doppio(int x1, int y1, int x2, int y2);			
+void disegna_rettangolo_singolo(int x1, int y1, int x2, int y2);			
+void disegna_rettangolo(int x1, int y1, int x2, int y2, int sing_dopp);				
 
 // disegna il carattere pieno in ogni posizione
 //... del rettangolo ottenendo un area uniforme
-void disegna_rettangolo_pieno();
-void cancella_rettangolo_pieno();
+void disegna_rettangolo_pieno(int x1, int y1, int x2, int y2);
+void cancella_rettangolo_pieno(int x1, int y1, int x2, int y2);
 
 // durante la cancellazione non c'e' bisogno di specificare
 //...singolo o doppio poiche cancella qualcunque cosa ci sia
 //...in quelle posizioni mettendoci degli spazi
-void cancella_linea_verticale(int,int,int);				
-void cancella_linea_orizzontale(int,int,int);			
-void cancella_linea(int,int,int,int);					
-void cancella_rettangolo(int,int,int,int);				
+void cancella_linea_verticale(int y1, int y2, int x);				
+void cancella_linea_orizzontale(int x1, int x2, int y);			
+void cancella_linea(int p1, int p2, int c, int vert_oriz);					
+void cancella_rettangolo(int x1, int y1, int x2, int y2);				
 //____________________________________________
 
 //____________________SLIDER__________________
-void slider_cambia_tasti_orizzontale(int,int,int);
-void slider_cambia_tasti_verticale(int,int,int);
-void slider_stampa_orizzontale(int,int,int,int);
-void slider_stampa_verticale(int,int,int,int);
-int slider_usa_verticale(int,int,int,int);
-int slider_usa_orizzontale(int,int,int,int);
-int slider_stampa_e_usa_vericale(int,int,int,int);
-int slider_stampa_e_usa_orizzontale(int,int,int,int);
-void slider_cambia_tasti(int,int,int,int);
-void slider_stampa(int,int,int,int,int);
-int slider_usa(int,int,int,int,int);
-int slider_stampa_e_usa(int,int,int,int,int);
+void slider_cambia_tasti_orizzontale(int meno, int piu, int conferma);
+void slider_cambia_tasti_verticale(int meno, int piu, int conferma);
+void slider_stampa_orizzontale(int x, int y, int numero_scelte, int scelta_attuale);
+void slider_stampa_verticale(int x, int y, int numero_scelte, int scelta_attuale);
+int slider_usa_verticale(int x, int y, int numero_scelte, int scelta_attuale);
+int slider_usa_orizzontale(int x, int y, int numero_scelte, int scelta_attuale);
+int slider_stampa_e_usa_vericale(int x, int y, int numero_scelte, int scelta_attuale);
+int slider_stampa_e_usa_orizzontale(int x, int y, int numero_scelte, int scelta_attuale);
+void slider_cambia_tasti(int meno, int piu, int conferma, int vert_oriz);
+void slider_stampa(int x, int y, int numero_scelte, int scelta_attuale, int vert_oriz);
+int slider_usa(int x, int y, int numero_scelte, int scelta_attuale, int vert_oriz);
+int slider_stampa_e_usa(int x, int y, int numero_scelte, int scelta_attuale, int vert_oriz);
 //____________________________________________
 
 //_____________________MENU___________________
-void menu_cambia_tasti(int,int,int);
-void menu_imposta_distanza(int);
-void menu_aggiungi_voce(const char*);
-void menu_imposta_posizione(int,int);
+void menu_cambia_tasti(int meno, int piu, int conferma);
+void menu_imposta_distanza(int distanza);
+void menu_aggiungi_voce(const char* voce);
+void menu_imposta_posizione(int x, int y);
 void menu_stampa();
-void menu_stampa_a_posizione(int,int);
-int menu_usa(int);
+void menu_stampa_a_posizione(int x, int y);
+int menu_usa(int scelta_attuale);
 //____________________________________________
 
