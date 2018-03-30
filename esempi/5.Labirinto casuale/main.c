@@ -1,7 +1,7 @@
 #include "../../lib/draw.h"
 
-#define WIDTH 10
-#define HEIGHT 10
+#define WIDTH 40
+#define HEIGHT 15
 
 #define UP 0
 #define DOWN 1
@@ -11,6 +11,8 @@
 void stampa_cella(int,int,int[4]);
 
 int main(){
+	terminale_massimizza_fullscreen();
+	sposta_vai_a(3,5);
 	casuale_inizializza();
 	int mat[WIDTH][HEIGHT][4];
 	int x,y,p;
