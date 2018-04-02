@@ -3,7 +3,7 @@
 **Semplice libreria grafica per trasformare quei semplici programmini in c/c++ e renderli graficamente migliori**
 
 Questa libreria è stata scritta per essere utilizzata dal devc++ e il suo compliatore (incluso se scaricato dal sito ufficiale) mingGW64. Il codice potrebbe funzionare tranquillamente anche in altri ambienti ma NON è garantito.
-per scaricare DevC++ [clicca qui](https://www.npmjs.com/package/selenium-standalone).
+per scaricare DevC++ [clicca qui](https://sourceforge.net/projects/orwelldevcpp/).
 
 Contiene le funzioni per: 
 - Terminale: Massimizzare la larghezza consentita anche col mouse o massimizzarlo a schermo intero
@@ -34,9 +34,9 @@ Inoltre ogni singola funzione è spiegata nel codice, se quindi aprite il file p
 ## define.h
 L'ultimo file della catena "define.h" contiene le costanti per la semplificazione del passaggio di parametri alle funzioni della libreria, inoltre include alcune delle librerie base; ciò rende quindi futile includerle anche nei vostri sorgenti ma non sarà fonte di errore.
 Le librerie gia include sono:
-     - stdio.h
-     - stdlib.
-     - windows.h
-     - time.h
-     - unistd.h
-     - conio.h
+- stdio.h
+- stdlib.
+- windows.h
+- time.h
+- unistd.h
+- conio.h
