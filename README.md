@@ -3,7 +3,7 @@
 **Semplice libreria grafica per trasformare quei semplici programmini in c/c++ e renderli graficamente migliori**
 
 Questa libreria è stata scritta per essere utilizzata dal devc++ e il suo compliatore (incluso se scaricato dal sito ufficiale) mingGW64. Il codice potrebbe funzionare tranquillamente anche in altri ambienti ma NON è garantito.
-per scaricare DevC++ [clicca qui](https://www.npmjs.com/package/selenium-standalone).
+per scaricare DevC++ [clicca qui](https://sourceforge.net/projects/orwelldevcpp/).
 
 Contiene le funzioni per: 
 - Terminale: Massimizzare la larghezza consentita anche col mouse o massimizzarlo a schermo intero
@@ -27,12 +27,16 @@ Se per esempio invece la cartella "lib" e la cartella che contiene il vostro sor
 Tenendo conto che ogni nome di variabile o funzione è stato scritto in italiano per semplificarne l'apprendimento, l'intera libreria è stata scritta utilizzano il minor numero di comandi diversi possibili; non sono quindi incluse classi e strutture che avrebbero semplificato il lavoro per un semplice fatto di apprendere pian piano i concetti base del linguaggio.
 Inoltre ogni singola funzione è spiegata nel codice, se quindi aprite il file principale "draw.h" vedrete l'inizializzazzione di tutte le funzioni con le rispettive spiegazioni.
 
+## Esempi
+![alt text](https://github.com/paoli7612/terminal-graphics/blob/master/img/examples/labirintoCasuale.PNG)
+![alt text](https://github.com/paoli7612/terminal-graphics/blob/master/img/examples/battagliaNavale_menuPrincipale.PNG)
+
 ## define.h
 L'ultimo file della catena "define.h" contiene le costanti per la semplificazione del passaggio di parametri alle funzioni della libreria, inoltre include alcune delle librerie base; ciò rende quindi futile includerle anche nei vostri sorgenti ma non sarà fonte di errore.
 Le librerie gia include sono:
-     - stdio.h
-     - stdlib.
-     - windows.h
-     - time.h
-     - unistd.h
-     - conio.h
+- stdio.h
+- stdlib.
+- windows.h
+- time.h
+- unistd.h
+- conio.h
