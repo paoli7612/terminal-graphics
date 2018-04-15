@@ -73,6 +73,7 @@ void stampa_cella(int x, int y, int p[4]){
 	stampa_a_posizione(CARATTERE_PIENO,x+3,y);
 	stampa_a_posizione(CARATTERE_PIENO,x,y+3);
 	stampa_a_posizione(CARATTERE_PIENO,x+3,y+3);
+	// stampa le porte settate a VERO / quelle chiuse
 	if (p[UP]){
 		stampa_a_posizione(CARATTERE_PIENO,x+1,y);
 		stampa_a_posizione(CARATTERE_PIENO,x+2,y);		
@@ -89,6 +90,7 @@ void stampa_cella(int x, int y, int p[4]){
 		stampa_a_posizione(CARATTERE_PIENO,x+3,y+1);
 		stampa_a_posizione(CARATTERE_PIENO,x+3,y+2);			
 	}
+	// se nessuna "porta" e' aperta stampa anche le caselle centrali
 	int i;
 	for (i=0; i<4; i++){
 		if (p[i] == FALSO) return; 
