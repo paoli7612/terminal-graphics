@@ -1,4 +1,5 @@
 # Contribuzioni
+![alt text](https://avatars0.githubusercontent.com/u/24592097?s=400&v=4 "Logo paoli7612")
 
 Quando contribuisci a questa repository, per favore, prima discuti del cambiamento che vuoi fare tramite le issue,
 email o qualsiasi altro metodo con i proprietari di questa repository prima di apportare una modifica.
