@@ -1,5 +1,5 @@
 # Terminal-Graphics
-
+## **DISPONIBILE ANCHE IN INGLESE**
 **Semplice libreria grafica per trasformare quei semplici programmini in c/c++ e renderli graficamente migliori**
 
 Questa libreria è stata scritta per essere utilizzata dal devc++ e il suo compliatore (incluso se scaricato dal sito ufficiale) mingGW64. Il codice potrebbe funzionare tranquillamente anche in altri ambienti ma NON è garantito.
