@@ -1,6 +1,6 @@
 // main.cpp
 
-#include "../../lib/draw.h"
+#include "../../lib_ita/draw.h"
 
 // larghezza e altezza di celle del labirinto
 #define Xtot 40

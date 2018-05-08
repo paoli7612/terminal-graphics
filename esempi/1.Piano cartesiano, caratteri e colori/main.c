@@ -1,4 +1,4 @@
-#include "../../lib/draw.h"
+#include "../../lib_ita/draw.h"
 
 int main(){
 	
@@ -26,4 +26,4 @@ int main(){
 	
 	// termina il programma
 	return 0;
-}s
+}

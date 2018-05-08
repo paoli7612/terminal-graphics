@@ -1,4 +1,4 @@
-#include "../../lib/draw.h"
+#include "../../lib_ita/draw.h"
 
 #define WIDTH 40
 #define HEIGHT 15

@@ -1,4 +1,4 @@
-#include "../../lib/draw.h"
+#include "../../lib_ita/draw.h"
 
 /*______________________________________________________________________________________________________________________
 |	Esempio di un semplice carattere che si muove a seconda delle frecce che 											|
