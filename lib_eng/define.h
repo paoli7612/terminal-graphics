@@ -4,11 +4,11 @@
 #define TRUE 1
 #define FALSE 0
 
-#define HORIZONTAL VERO
-#define VERTICAL FALSO
+#define HORIZONTAL TRUE
+#define VERTICAL FALSE
 
-#define SINGLE VERO
-#define DOUBBLE FALSO
+#define SINGLE TRUE
+#define DOUBBLE FALSE
 
 //----------------------------------------------
 #include <stdio.h>
@@ -59,13 +59,13 @@
 #define SPACE 0 // carattere vuoto/spazio
 #define FULL_CHAR 219 // carattere pieno
 //
-#define ARROW_SU 24
-#define ARROW_GIU 25
-#define ARROW_SINISTRA 27
-#define ARROW_DESTRA 26
+#define ARROW_UP 24
+#define ARROW_DOWN 25
+#define ARROW_LEFT 27
+#define ARROW_RIGHT 26
 //-----------------------------------------------
 
-//----TASTIERA-----------------------------------
+//----KEYBOARD-----------------------------------
 #define K_UP 72
 #define K_DOWN 80
 #define K_LEFT 75
