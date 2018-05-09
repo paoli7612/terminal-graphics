@@ -35,31 +35,25 @@ void draw_line(int p1, int p2, int c, int vert_horiz, int sing_doub){
 }
 
 void draw_rect_single(int x1, int y1, int x2, int y2){
-	// LATI ORIZZONTALI
-	draw_line_horizontal_single(x1+1,x2-1,y1); // LATO ALTO
-	draw_line_horizontal_single(x1+1,x2-1,y2); // LATO BASSO
-	// LATI VERTICALI
-	draw_line_vertical_single(y1+1,y2-1,x1); // LATO SINISTRO
-	draw_line_vertical_single(y1+1,y2-1,x2); // LATO DESTRO
-	// ANGOLI
-	draw_char_pos(as,x1,y1); // ANGOLO ALTO SINISTRA
-	draw_char_pos(ad,x2,y1); // ANGOLO ALTO DESTRA
-	draw_char_pos(bs,x1,y2); // ANGOLO BASSO SINISTRA
-	draw_char_pos(bd,x2,y2); // ANGOLO BASSO DESTRA
+	draw_line_horizontal_single(x1+1,x2-1,y1);
+	draw_line_horizontal_single(x1+1,x2-1,y2);
+	draw_line_vertical_single(y1+1,y2-1,x1);
+	draw_line_vertical_single(y1+1,y2-1,x2);
+	draw_char_pos(as,x1,y1);
+	draw_char_pos(ad,x2,y1);
+	draw_char_pos(bs,x1,y2);
+	draw_char_pos(bd,x2,y2);
 }
 
 void draw_rect_doubble(int x1, int y1, int x2, int y2){
-	// LATI ORIZZONTALI
-	draw_line_horizontal_doubble(x1,x2,y1); // LATO ALTO
-	draw_line_horizontal_doubble(x1,x2,y2); // LATO BASSO
-	// LATI VERTICALI
-	draw_line_vertical_doubble(y1+1,y2-1,x1); // LATO SINISTRO
-	draw_line_vertical_doubble(y1+1,y2-1,x2); // LATO DESTRO
-	// ANGOLI
-	draw_char_pos(AS,x1,y1); // ANGOLO ALTO SINISTRA
-	draw_char_pos(AD,x2,y1); // ANGOLO ALTO DESTRA
-	draw_char_pos(BS,x1,y2); // ANGOLO BASSO SINISTRA
-	draw_char_pos(BD,x2,y2); // ANGOLO BASSO DESTRA
+	draw_line_horizontal_doubble(x1,x2,y1);
+	draw_line_horizontal_doubble(x1,x2,y2);
+	draw_line_vertical_doubble(y1+1,y2-1,x1);
+	draw_line_vertical_doubble(y1+1,y2-1,x2);
+	draw_char_pos(AS,x1,y1);
+	draw_char_pos(AD,x2,y1);
+	draw_char_pos(BS,x1,y2); 
+	draw_char_pos(BD,x2,y2);
 }
 
 void draw_rect(int x1, int y1, int x2, int y2, int sing_doub){
