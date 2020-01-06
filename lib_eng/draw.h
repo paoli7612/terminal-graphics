@@ -46,7 +46,7 @@ void terminal_clear();
 void terminal_quit();
 
 //set title of terminal
-void terminal_set_title(const char* title)
+void terminal_set_title(const char* title);
 
 //resize terminal to max size
 void terminal_max_size();
