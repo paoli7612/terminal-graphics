@@ -29,6 +29,9 @@ int main(){
 	root->right = newNode('C');
 	root->right->left = newNode('F');
 	root->right->right = newNode('G');
+	root->left->left->left = newNode('H');
+	root->right->left->right = newNode('I');
+	root->right->right->left = newNode('J');
 	show_tree(root);
 	vai_a(1,28);
 	cout << endl << "order" << endl;
