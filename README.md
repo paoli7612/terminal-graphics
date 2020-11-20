@@ -1,6 +1,6 @@
 # Terminal-Graphics
 
-<table >
+<table>
   <tr>
   <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg" width="50" >
   </td>
