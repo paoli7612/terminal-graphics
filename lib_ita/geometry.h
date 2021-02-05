@@ -64,26 +64,28 @@ void disegna_rettangolo_doppio(int x1, int y1, int x2, int y2){
 	stampa_a_posizione(BD,x2,y2); // ANGOLO BASSO DESTRA
 }
 
-void disegna_rettangolo(int x1, int y1, int x2, int y2, int sing_dopp){
-	if (sing_dopp){disegna_rettangolo_singolo(x1,y1,x2,y2);}
-	else {disegna_rettangolo_doppio(x1,y1,x2,y2);}
+void disegna_rettangolo(int x1, int y1, int x2, int y2, bool sing_dopp){
+	if (sing_dopp)
+		disegna_rettangolo_singolo(x1,y1,x2,y2);
+	else
+		disegna_rettangolo_doppio(x1,y1,x2,y2);
 }
 
 void cancella_linea_verticale(int y1, int y2, int x){
-	int y;
-	for (y=y1; y<=y2; y++)
+	for (int y=y1; y<=y2; y++)
 		stampa_a_posizione(SPAZIO,x,y);
 }
 
 void cancella_linea_orizzontale(int x1, int x2, int y){
-	int x;
-	for (x=x1; x<=x2; x++)
+	for (int x=x1; x<=x2; x++)
 		stampa_a_posizione(SPAZIO,x,y);
 }
 
 void cancella_linea(int p1, int p2, int c, int vert_oriz){
-	if (vert_oriz){cancella_linea_orizzontale(p1,p2,c);}
-	else {cancella_linea_verticale(p1,p2,c);}
+	if (vert_oriz)
+		cancella_linea_orizzontale(p1,p2,c);
+	else
+		cancella_linea_verticale(p1,p2,c);
 }
 
 void cancella_rettangolo(int x1, int y1, int x2, int y2){
@@ -94,19 +96,13 @@ void cancella_rettangolo(int x1, int y1, int x2, int y2){
 }
 
 void disegna_rettangolo_pieno(int x1, int y1, int x2, int y2){
-	int x,y;
-	for (y=y1; y<=y2; y++){
-		for (x=x1; x<=x2; x++){
+	for (int y=y1; y<=y2; y++)
+		for (int x=x1; x<=x2; x++)
 			stampa_a_posizione(CARATTERE_PIENO,x,y);
-		}
-	}
 }
 
 void cancella_rettangolo_pieno(int x1, int y1, int x2, int y2){
-	int x,y;
-	for (y=y1; y<=y2; y++){
-		for (x=x1; x<=x2; x++){
+	for (int y=y1; y<=y2; y++)
+		for (int x=x1; x<=x2; x++)
 			stampa_a_posizione(SPAZIO,x,y);
-		}
-	}
 }
