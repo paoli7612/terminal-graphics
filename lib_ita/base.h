@@ -16,29 +16,28 @@ void cambia_colore_casuale(){
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),  nuovo_colore);
 }
 
-void vai_a(int x, int y){
+void vai_a(const int x, const int y){
 	COORD coord;
 	coord.X = x+_x_spostamento;
 	coord.Y = y+_y_spostamento;
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-void sposta_vai_a(int x,int y){
+void sposta_vai_a(const int x, const int y){
 	_x_spostamento = x;
 	_y_spostamento = y;
 }
 
-void stampa_carattere(char carattere){
-	printf("%c",carattere);
+void stampa_carattere(const char carattere){
+	cout << carattere;
 }
 
-void stampa_a_posizione(char c, int x, int y){
+void stampa_a_posizione(const char c, const int x, const int y){
 	vai_a(x,y);
 	stampa_carattere(c);
 }
 
-void stampa_stringa_a_posizione(const char *c, int x, int y){
-	int lunghezza = strlen(c);
+void stampa_stringa_a_posizione(const char *c, const int x, const int y){
 	vai_a(x,y);
 	cout << c;
 }
@@ -48,7 +47,7 @@ char attendi_tasto(){
 	return tasto_premuto;
 }
 
-void attendi_secondi(int secondi){
+void attendi_secondi(const int secondi){
 	sleep(secondi);
 }
 
