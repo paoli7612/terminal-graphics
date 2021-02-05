@@ -1,22 +1,20 @@
 
 //####################  DEFINE  ####################
 
-#define VERO 1
-#define FALSO 0
+#define ORIZZONTALE true
+#define VERTICALE false
 
-#define ORIZZONTALE VERO
-#define VERTICALE FALSO
-
-#define SINGOLO VERO
-#define DOPPIO FALSO
+#define SINGOLO true
+#define DOPPIO false
 
 //----LIBRERIE-----------------------------------
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>	
+#include <conio.h>
 #include <windows.h>
 #include <unistd.h>
-#include <time.h>
+#include <ctime>
+#include <iostream>
 
 //-----------------------------------------------
 
@@ -122,7 +120,6 @@ int _slider_verticale_meno = K_SU;
 int _slider_verticale_piu = K_GIU;
 int _slider_verticale_conferma = K_INVIO;
 
-
 //MENU
 int _menu_piu = K_GIU;
 int _menu_meno = K_SU;
@@ -131,37 +128,3 @@ int _menu_conferma = K_INVIO;
 //SPOSTAMENTO DEL (vai_a)
 int _x_spostamento = 0;
 int _y_spostamento = 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
