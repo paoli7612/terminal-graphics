@@ -1,11 +1,8 @@
 
 //####################  DEFINE  ####################
 
-#define ORIZZONTALE true
-#define VERTICALE false
-
-#define SINGOLO true
-#define DOPPIO false
+enum linea_t { ORIZZONTALE, VERTICALE };
+enum bordo_t { SINGOLO, DOPPIO };
 
 //----LIBRERIE-----------------------------------
 #include <stdio.h>

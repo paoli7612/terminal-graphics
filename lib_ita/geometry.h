@@ -23,16 +23,16 @@ void disegna_linea_orizzontale_doppia(int x1, int x2, int y){
 		stampa_a_posizione(LO,x,y);
 }
 
-void disegna_linea(int p1, int p2, int c, int vert_oriz, int sing_dopp){
-	if (vert_oriz)
-		if (sing_dopp)
+void disegna_linea(int p1, int p2, int c, linea_t linea, bordo_t bordo){
+	if (linea == ORIZZONTALE)
+		if (bordo == SINGOLO)
 			disegna_linea_orizzontale_singola(p1,p2,c);
-		else
+		else // bordo == DOPPIO
 			disegna_linea_orizzontale_doppia(p1,p2,c);
-	else
-		if (sing_dopp)
+	else // linea == VERTICALE
+		if (bordo == SINGOLO)
 			disegna_linea_verticale_singola(p1,p2,c);
-		else
+		else  // bordo == DOPPIO
 			disegna_linea_verticale_doppia(p1,p2,c);
 }
 
@@ -81,10 +81,10 @@ void cancella_linea_orizzontale(int x1, int x2, int y){
 		stampa_a_posizione(SPAZIO,x,y);
 }
 
-void cancella_linea(int p1, int p2, int c, int vert_oriz){
-	if (vert_oriz)
+void cancella_linea(int p1, int p2, int c, linea_t linea){
+	if (linea == ORIZZONTALE)
 		cancella_linea_orizzontale(p1,p2,c);
-	else
+	else // linea == VERTICALE
 		cancella_linea_verticale(p1,p2,c);
 }
 

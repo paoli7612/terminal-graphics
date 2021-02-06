@@ -93,7 +93,7 @@ void cancella_rettangolo_pieno(int x1, int y1, int x2, int y2);
 //...in quelle posizioni mettendoci degli spazi
 void cancella_linea_verticale(int y1, int y2, int x);
 void cancella_linea_orizzontale(int x1, int x2, int y);
-void cancella_linea(int p1, int p2, int c, int vert_oriz);
+void cancella_linea(int p1, int p2, int c, linea_t linea);
 void cancella_rettangolo(int x1, int y1, int x2, int y2);
 //____________________________________________
 
