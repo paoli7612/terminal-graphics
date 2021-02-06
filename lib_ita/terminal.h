@@ -22,7 +22,7 @@ void terminale_massimizza(){
 	HWND console = GetConsoleWindow(); 
 	RECT r;
 	GetWindowRect(console, &r);
-	MoveWindow(console, 0, 0, 1000, 1000, VERO);
+	MoveWindow(console, 0, 0, 1000, 1000, true);
 }
 
 void terminale_massimizza_fullscreen(){
