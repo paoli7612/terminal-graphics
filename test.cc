@@ -136,62 +136,82 @@ namespace tastiera {
 	};
 }
 
+enum bordo_t { SINGOLO, DOPPIO };
+enum dir_t { VERTICALE, ORIZZONTALE};
 namespace disegna {
-	enum bordo_t { SINGOLO, DOPPIO };
-	enum dir_t { VERTICALE, ORIZZONTALE};
+	void linea(pos_t, const int, const dir_t, const bordo_t);
+	
 	void _char_at_pos(const pos_t pos, const char c)
 	{
 		vai_a(pos);
 		cout << c;
 	}
-	void linea_verticale_singola(pos_t pos, const int l)
+	
+	namespace _linea
 	{
+		void verticale_singola(pos_t pos, const int l)
+		{
+			for (int i=0; i<l; i++)
+			{
+				_char_at_pos(pos, lv);
+				pos.y++;
+			}		
+		}
+		void verticale_doppia(pos_t pos, const int l)
+		{
+			for (int i=0; i<l; i++)
+			{
+				_char_at_pos(pos, LV);
+				pos.y++;
+			}		
+		}
+		void orizzontale_singola(pos_t pos, const int l)
+		{
+			for (int i=0; i<l; i++)
+			{
+				_char_at_pos(pos, lo);
+				pos.x++;
+			}		
+		}
+		void orizzontale_doppia(pos_t pos, const int l)
+		{
 		for (int i=0; i<l; i++)
-		{
-			_char_at_pos(pos, lv);
-			pos.y++;
-		}		
+			{
+				_char_at_pos(pos, LO);
+				pos.x++;
+			}		
+		}
 	}
-	void linea_verticale_doppia(pos_t pos, const int l)
+	
+	namespace _rettangolo
 	{
-		for (int i=0; i<l; i++)
+		void doppio(const pos_t angolo1, const pos_t angolo2)
 		{
-			_char_at_pos(pos, LV);
-			pos.y++;
-		}		
-	}
-	void linea_orizzontale_singola(pos_t pos, const int l)
-	{
-		for (int i=0; i<l; i++)
+			linea(angolo1, angolo2.x-angolo1.x, ORIZZONTALE, DOPPIO);
+			linea(angolo1, angolo2.y-angolo1.y, VERTICALE, DOPPIO);
+		}
+		
+		void singolo(pos_t pos)
 		{
-			_char_at_pos(pos, lo);
-			pos.x++;
-		}		
-	}
-	void linea_orizzontale_doppia(pos_t pos, const int l)
-	{
-	for (int i=0; i<l; i++)
-		{
-			_char_at_pos(pos, LO);
-			pos.x++;
-		}		
+			
+		}
 	}
 
-	void linea(pos_t pos, const int l, dir_t dir, bordo_t bordo)
+	void linea(pos_t pos, const int l, const dir_t dir, const bordo_t bordo)
 	{
 		if (dir == VERTICALE)
 		{
 			if (bordo == DOPPIO)
-				linea_verticale_doppia(pos, l);
+				_linea::verticale_doppia(pos, l);
 			else if (bordo == SINGOLO)
-				linea_verticale_singola(pos, l);
+				_linea::verticale_singola(pos, l);
 		}
 		else if (dir == ORIZZONTALE) 
 		{
 			if (bordo == DOPPIO)
-				linea_orizzontale_doppia(pos, l);
+				_linea::orizzontale_doppia(pos, l);
 			else if (bordo == SINGOLO)
-				linea_orizzontale_singola(pos, l);
+				_linea::orizzontale_singola(pos, l);
 		}
 	}
 
@@ -199,6 +219,6 @@ namespace disegna {
 
 int main(int argc, char **argv)
 {
-	
+	disegna::_rettangolo::doppio({2, 2}, {5, 5});	
 	return 0;
 }
