@@ -61,6 +61,20 @@ void attendi_invio()
 	getchar();
 }
 namespace terminale {
+	void pulisci()
+	{
+		system("CLS");
+	}	
+	void chiudi()
+	{
+		system("exit");
+	}
+	void imposta_titolo(const char *titolo)
+	{
+		HWND hWnd = GetConsoleWindow();
+		SetConsoleTitle(titolo);
+	}
+}
 
 int main(int argc, char **argv)
 {	
