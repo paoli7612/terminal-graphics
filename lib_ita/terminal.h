@@ -5,18 +5,9 @@
 
 #define TERMINALE_LARGHEZZA_TOTALE 80  // da 0 a 79 
 
-void terminale_pulisci(){
-	system("CLS");
-}
 
-void terminale_chiudi(){
-	system("exit");
-}
 
-void terminale_imposta_titolo(const char* titolo){
-	HWND hWnd = GetConsoleWindow();
-  	SetConsoleTitle(titolo);
-}
+
 
 void terminale_massimizza(){
 	HWND console = GetConsoleWindow(); 
