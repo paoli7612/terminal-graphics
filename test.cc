@@ -60,6 +60,7 @@ void attendi_invio()
 {
 	getchar();
 }
+
 namespace terminale {
 	void pulisci()
 	{
@@ -74,10 +75,33 @@ namespace terminale {
 		HWND hWnd = GetConsoleWindow();
 		SetConsoleTitle(titolo);
 	}
+	void massimizza()
+	{
+		HWND console = GetConsoleWindow(); 
+		RECT r;
+		GetWindowRect(console, &r);
+		MoveWindow(console, 0, 0, 1000, 1000, true);
+	}
+	void fullscreen()
+	{
+		HWND hWnd = GetConsoleWindow();
+	    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+	    COORD NewSBSize = GetLargestConsoleWindowSize(hOut);
+	    SMALL_RECT DisplayArea = {0,0,0,0};
+	
+	    SetConsoleScreenBufferSize(hOut, NewSBSize);
+	
+	    DisplayArea.Right = NewSBSize.X;
+	    DisplayArea.Bottom = NewSBSize.Y;
+	
+	    SetConsoleWindowInfo(hOut, TRUE, &DisplayArea);
+	
+	    ShowWindow(hWnd, SW_MAXIMIZE);	
+	}
 }
 
 int main(int argc, char **argv)
 {	
-
+	
 	return 0;
 }
